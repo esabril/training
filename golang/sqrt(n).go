@@ -2,17 +2,15 @@ package main
 
 import "fmt"
 
-var right float64
-var left = 1.0
-var average = 0.0
-
 func main() {
-	x := 9.0
+	x := 2.0
 	fmt.Printf("%f %f", x, Sqrt(x))
 }
 
 func Sqrt(number float64) float64 {
-	right = number
+	left := 1.0
+	right := number
+	average := 0.0
 
 	for (right - left) > 1e-8 {
 		average = left + (right - left)/2
